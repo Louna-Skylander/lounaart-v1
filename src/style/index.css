@@ -1,0 +1,136 @@
+/* ============================================================================ */
+/*                                  GOOGLE FONTS                                */
+/* ============================================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ============================================================================ */
+/*                                  VARIABLE CSS                                */
+/* ============================================================================ */
+
+:root {
+    /* ===== Colors =====  */
+    --bg-color: #020202;
+    --main-color: #ffb800;
+    --light-color: #fff;
+    --dark-color: #1b1b1b;
+
+    /* ===== Font and Typography ===== */
+    --body-font: 'Poppins', sans-serif;
+    --title-font: 'Permanent Marker', cursive;
+    --h1-font-size: 2.5rem;
+    --larger-font-size: 2rem;
+    --large-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+
+    /* ===== Font Weight ===== */
+    --font-medium: 500;
+    --font-normal: 400;
+    --font-light: 300;
+
+    /* ===== Border Radius ===== */
+    --card-radius: 2rem;
+    --button-radius: 1rem;
+}
+
+    /* ===== Media Screen ===== */
+@media screen and (max-width: 1024px) {
+    :root {
+        --h1-font-size: 2rem;
+        --large-font-size: 1rem;
+        --normal-font-size: 0.8rem;
+    }
+}
+
+/* ============================================================================ */
+/*                                  GENERAL                                     */
+/* ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, button, input, textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--light-color);
+    background: var(--bg-color);
+}
+
+h1, h2, h3 {
+    color: var(--main-color);
+    font-weight: var(--font-medium);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img {
+    height: auto;
+    vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================================================================ */
+/*                                CSS CLASSES                                   */
+/* ============================================================================ */
+
+.container {
+    max-width: 1080px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-light);
+    color: var(--light-color);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section__title::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: var(--light-color);
+}

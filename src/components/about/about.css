@@ -1,0 +1,120 @@
+.about {
+    height: 100%;
+}
+
+.about__container {
+    grid-template-columns: 3fr 9fr;
+    column-gap: 2rem;
+    margin: 2rem;
+}
+
+.about__card {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: var(--card-radius);
+    transform: rotate(-7deg);
+    height: 318px;
+    width: 250px;
+    margin-bottom: 1rem;
+}
+
+.about__img {
+    border-radius: var(--card-radius);
+    transform: rotate(7deg);
+    max-width: 100%;
+}
+
+.about__content {
+    background-color: var(--dark-color);
+    border-radius: var(--card-radius);
+    padding: 2rem;
+}
+
+.about__info h1, h5 {
+    text-align: center;
+}
+
+.about__info h1 {
+    font-family: var(--title-font);
+    margin-bottom: .5rem;
+}
+
+.about__description {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about__skills {
+    gap: 1rem;
+}
+
+.skills__title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: var(--font-medium);
+}
+
+.skills__title::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: var(--light-color);
+    margin-left: 10px;
+}
+
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: .5rem;
+}
+
+.skills__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills__item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+/* ============================================================================ */
+/*                               MEDIA SCREEN                                   */
+/* ============================================================================ */
+
+@media screen and (min-width: 1080px) {
+    .about {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 720px;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    .about__card {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+
+    .about__card {
+        justify-self: center;
+        margin-bottom: .5rem;
+    }
+
+    .skills__list {
+        grid-template-columns: 1fr;
+    }
+}
